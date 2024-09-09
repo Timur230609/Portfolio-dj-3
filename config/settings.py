@@ -13,12 +13,13 @@ SECRET_KEY = 'django-insecure-gh#mo0w%rxj_s#jz1b-ldzw6y629yq)8f&&y%gg@06ni@27ky%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["7796-84-54-72-44.ngrok-free.app","www.7796-84-54-72-44.ngrok-free.app"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

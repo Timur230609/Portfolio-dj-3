@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Contact
+from .models import Contact,Team,Project,About
 
 
 
-admin.site.register(Contact)
+admin.site.register((Contact,About,Team,Project))
 

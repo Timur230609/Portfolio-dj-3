@@ -4,6 +4,11 @@ from django.urls import reverse
 from django.contrib import messages
 from .models import Contact
 
+
+
+def home_view(request):
+    return render(request, 'index.html')
+
 def contact_view(request):
     if request.method == 'POST':
         try:
@@ -21,30 +26,6 @@ def contact_view(request):
     return render(request, 'contact.html')
 
 
-
-
-def home_view(request):
-    return render(request, 'index.html')
-
-
-def contact_view(request):
-    if request.method =='POST':
-        try:
-            name = request.POST.get('name')
-            email = request.POST.get('email')
-            content = request.POST.get('content')
-            new_contact = Contact(name=name,email=email,content=content)
-            new_contact.save()
-            messages.success(request,"Your message succesfully sent!")
-            return HttpResponseRedirect(reverse('home-page'))
-        except:
-            pass 
-    
-    return render(request, 'contact.html')
-
-
-
-from django.shortcuts import render
 
 def project_view(request):
 
